@@ -1,0 +1,33 @@
+<htm>
+  <head>
+    <title>Mortgage Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+
+  <body style="background-image: url('home.png'); background-repeat: no-repeat, repeat; background-size: auto background-size: 100%">
+    <h1 style="text-align: center;font-family: verdana; font-size: 7em; color: red">Mortgage Calculator</h1>
+ <div class="container" style="position: absolute;right: -160; bottom: 70px">
+            <div class="card" style="width: 50rem">
+                    <div class="card-body" style="background-color: C7B4B4; border-radius: 25px">
+    <form action="">
+       
+        <label style="font-family: monospace;font-size:1em;position: relative; right:-10%">Rate/Interest% <br/>  <input style="position: relative; right:-5%" required=true  type="text" id="apr" name="APR"/></label>
+        <hr/>
+        <label style="font-family: monospace; right:100;position: relative; right:-10%">Loan Term <br/>   <input style="position: relative; right:-5%" required=true type="text" id="trm" name="APR"/></label>
+        <hr/>
+        <label style="font-family: monospace;position: relative; right:-10%">Loan Amount <br/>  <input style="position: relative; right:-5%" required=true type="text" id="amt" name="amt"/></lablel>
+            <hr/>
+        <input style="position: relative; right:-5%" id="pmt" name="mPmt"/>
+        <hr/>
+        <input  style="position: relative; right:-15%" class="btn btn-warning" type="button" id="sbt" value="Submit" />
+        <hr/>
+        <input  style="position: relative; right:-15%" class="btn btn-danger" type="reset" id="rst" value="Reset Form" />
+        </form>
+    </div>
+    </div>
+</div>
+      
+
+    <script src="main.js" type="text/javascript"></script>
+  </body>
+</htm>
