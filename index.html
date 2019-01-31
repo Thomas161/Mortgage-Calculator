@@ -8,22 +8,32 @@
     <h1 style="text-align: center;font-family: verdana; font-size: 7em; color: red">Mortgage Calculator</h1>
  <div class="container" style="position: absolute;right: -160; bottom: 70px">
             <div class="card" style="width: 50rem">
-                    <div class="card-body" style="background-color: C7B4B4; border-radius: 25px">
-    <form action="">
-       
-        <label style="font-family: monospace;font-size:1em;position: relative; right:-10%">Rate/Interest% <br/>  <input style="position: relative; right:-5%" required=true  type="text" id="apr" name="APR"/></label>
-        <hr/>
-        <label style="font-family: monospace; right:100;position: relative; right:-10%">Loan Term (Years) <br/>   <input style="position: relative; right:-5%" required=true type="text" id="trm" name="APR"/></label>
-        <hr/>
-        <label style="font-family: monospace;position: relative; right:-10%">Loan Amount <br/>  <input style="position: relative; right:-5%" required=true type="text" id="amt" name="amt"/></lablel>
-            <hr/>
- Monthly Payments $
-<input style="position: relative; right:-5%" id="pmt" name="mPmt" type="text" />
-        <hr/>
-        <input  style="position: relative; right:-15%" class="btn btn-warning" type="button" id="sbt" value="Submit" />
-        <hr/>
-        <input  style="position: relative; right:-15%" class="btn btn-danger" type="reset" id="rst" value="Reset Form" />
-        </form>
+<div class="card-body" style="background-color:E2B356">
+<form action="">
+  <label style="margin-left:10%">Interest Rate%:
+<input type="text" id="apr" name="APR" style=" margin-top: 5%; margin-left: 60%; padding:3%" />
+  </label>
+  <hr/>
+<label style= "margin-left:10%">Loan Term (Years):
+<input type="text" id="trm" name="APR" style=" margin-top: 5%; margin-left: 57%; padding:3%" />
+  </label>
+  <hr/>
+<label style="margin-left:10%">Loan Amount:
+<input type="text" id="amt" name="amt" style=" margin-top: 5%; margin-left: 60%; padding:3%" />
+    </label>
+    <hr/>
+<label style="margin-left:5%">Monthly Payment</label>
+<input type="text" id="pmt" name="mPmt" style=" margin-top: 5%; margin-left: 10%; padding:3%" />
+    <hr/>
+<label style="margin-left:5%">Total Owed for Life of Loan</label>
+<input type="text" id="owe" name="total" style=" margin-top: 5%; margin-left: 10%; padding:3%" />
+<hr/>
+<input type="button" id="sbt" value="Submit" class="btn btn-primary" style=" margin-top: 5%; margin-left: 40%; padding:3%"
+/>
+    <hr/>
+<input type="reset" id="rst" value="Reset Form" class="btn btn-danger" style=" margin-bottom: 15%; margin-left: 40%; padding:3%"
+/>
+</form>
     </div>
     </div>
 </div>
