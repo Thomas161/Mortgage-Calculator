@@ -1,3 +1,6 @@
+
+"use strict";
+
 var term;
 var apr;
 var amt;
@@ -17,7 +20,9 @@ function getValues() {
 	amt = document.getElementById("amt").value;
 	apr /= 1200;
 	term *= 12;
+	
 	mPmt = calculatePayment();
+	
 	document.getElementById("pmt").value = "$" + mPmt.toFixed(2);
 	document.getElementById("owe").value = "$"+(mPmt*term).toFixed(2);
 }
@@ -27,6 +32,8 @@ function calculatePayment() {
 	
 	return payment;
 }
+
+
 
 
 
