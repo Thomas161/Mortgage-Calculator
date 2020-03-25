@@ -49,6 +49,33 @@ label {
 #rst {
   margin-left: 30px;
 }
-#demo {
-  color: red;
+
+/* input[type="text"] {
+  background-color: red;
+}
+input[type="text"]:hover {
+  background-color: lightgray;
+} */
+#myModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 600%;
+  height: 300%;
+  left: 0;
+  top: 0;
+  background-color: lightgreen;
+}
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.modalContent {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
 }

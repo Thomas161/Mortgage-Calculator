@@ -14,29 +14,31 @@
     <h1>Mortgage Calculator</h1>
     <div class="box">
       <br />
-      <form>
+      <form name="form1">
         <label>Rate/Interest%</label>
-        <input required="true" type="text" id="int" name="APR" />
-        <p id="demo"></p>
+        <input required="true" type="text" id="int" />
+
         <hr />
         <label>Loan Term </label>
-        <input required="true" type="text" id="term" name="APR" />
-        <p id="demo"></p>
+        <input required="true" type="text" id="term" />
+
         <hr />
         <label>Loan Amount </label>
-        <input required="true" type="text" id="amount" name="amt" />
-        <p id="demo"></p>
+        <input required="true" type="text" id="amount" />
+
         <hr />
         <label>$</label>
         <input id="pmt" name="mPmt" placeholder="" />
         <hr />
-        <input
-          onfocus="validateFields()"
+        <button
           class="btn btn-warning"
+          onclick="validateFields()"
           type="button"
           id="sbt"
           value="Submit"
-        />
+        >
+          Submit
+        </button>
         <hr />
         <input
           class="btn btn-danger"
@@ -45,6 +47,13 @@
           value="Reset Form"
         />
       </form>
+    </div>
+
+    <div id="myModal">
+      <div class="modalContent">
+        <span id="close"></span>
+        <p>Hello</p>
+      </div>
     </div>
     <script src="js/main.js" type="text/javascript"></script>
   </body>

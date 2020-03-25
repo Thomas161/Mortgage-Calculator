@@ -19,20 +19,46 @@ function getValues() {
 }
 getValues();
 
-function validateFields() {
-  var text;
-  var t = document.getElementById("term");
-  var a = document.getElementById("amount");
-  var i = document.getElementById("int");
-  if (t === null && t === undefined && t === "") {
-    text = "needs an input";
-  } else if (a === null && a === undefined && a === "") {
-    text = "needs an input";
-  } else if (i === null && i === undefined && i === "") {
-    text = "needs an input";
-  } else {
-    text = "";
+// function validateFields() {
+//   var err;
+
+//   var term = document.getElementById("term");
+//   var amount = document.getElementById("amount");
+//   var interest = document.getElementById("int");
+//   console.log(term.style);
+//   console.log(amount);
+//   console.log(interest);
+
+//   if (
+//     (isNaN(term) && term.value.trim() == "") ||
+//     (isNaN(amount) && amount.value.trim() == "") ||
+//     (isNaN(intrest) && interest.value.trim() == "")
+//   ) {
+//     err = "no good";
+//     return false;
+//   } else {
+//     err = green;
+//     true;
+//   }
+//   document.getElementById("demo").innerHTML = err;
+// }
+// validateFields();
+
+//modal
+var modal = document.getElementById("myModal");
+//button
+var btn = document.getElementById("sbt");
+//span to close
+var sp = document.getElementById("close");
+btn.onclick = function() {
+  modal.style.display = "block";
+};
+sp.onclick = function() {
+  modal.style.block = "none";
+};
+
+window.onclick = event => {
+  if (event.target == modal) {
+    modal.style.display = "none";
   }
-  return (document.getElementById("demo").innerHTML = text);
-}
-validateFields();
+};
