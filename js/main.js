@@ -1,7 +1,4 @@
-var term;
-var apr;
-var amt;
-var mPmt;
+var term, apr, amt, mPmt;
 
 window.onload = function() {
   //  document.getElementById("apr").focus();
