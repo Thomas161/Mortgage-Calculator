@@ -5,28 +5,50 @@ body {
 }
 
 h1 {
+  color: blueviolet;
   text-align: center;
-  font-family: verdana;
-  font-size: 7em;
-  color: red;
 }
-.container {
+.box {
   position: absolute;
-  right: 10;
-  bottom: 100px;
-}
-.card {
-  width: 400px;
+  left: 10px;
+  top: 120px;
   border: solid gold 4px;
   border-radius: 20px;
-}
-.card-body {
   background-color: #4d4848;
-  border-radius: 25px;
+  height: 430px;
+  min-width: 500px;
+}
+
+#term,
+#int,
+#amount,
+#pmt {
+  width: 100px;
+}
+#int {
+  margin-left: 110px;
+}
+#term {
+  margin-left: 150px;
+}
+#amount {
+  margin-left: 133px;
+}
+#pmt {
+  margin-left: 210px;
 }
 
 label {
   font-family: monospace;
   color: white;
-  position: relative;
+  margin-left: 20px;
+  font-size: medium;
+}
+
+#sbt,
+#rst {
+  margin-left: 30px;
+}
+#demo {
+  color: red;
 }
