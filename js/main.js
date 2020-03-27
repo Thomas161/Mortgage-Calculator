@@ -45,13 +45,6 @@ function getValues() {
   return f;
 }
 
-//plotting
-// function plotData() {
-//   return document.getElementById("tester");
-// }
-
-// Plotly.newPlot("tester", [{ y: [plotData()], type: "line" }]);
-
 // function validateFields() {
 //   var err;
 
@@ -76,27 +69,3 @@ function getValues() {
 //   document.getElementById("demo").innerHTML = err;
 // }
 // validateFields();
-
-//modal
-// var modal = document.querySelector(".modal");
-// //button
-// var btn = document.getElementById("sbt");
-// var d = document.getElementById("demo");
-// //span to close
-// var sp = document.querySelector(".close");
-
-// btn.onclick = function() {
-// modal.style.display = "block";
-// d.style.display = "block";
-// };
-// sp.onclick = function() {
-// modal.style.display = "none";
-// };
-
-// window.onclick = function(event) {
-// if (event.target == modal) {
-// return (modal.style.display = "none");
-// } else {
-// return null;
-// }
-// };
