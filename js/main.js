@@ -12,12 +12,45 @@ function getValues() {
 
   term *= 12;
   interest /= 1200;
+
   monthPayment =
     (amount * (interest * Math.pow(1 + interest, term))) /
     (Math.pow(1 + interest, term) - 1);
-  return (document.getElementById("pmt").value = monthPayment.toFixed(2));
+
+  var f = function() {
+    var a = (document.getElementById("demo").innerHTML = monthPayment.toFixed(
+      0
+    ));
+    let barChart = new Chart(myChart, {
+      type: "bar",
+      data: {
+        labels: ["Monthly Payments"],
+        datasets: [
+          {
+            label: "MP ($)",
+            data: [a],
+            backgroundColor: "green",
+            borderColor: "#777",
+            color: "red",
+            width: "150"
+          }
+        ]
+      },
+      options: {}
+    });
+    console.log("BarChart : ", barChart);
+    return barChart;
+  };
+  console.log("Closure Function : ", f());
+  return f;
 }
-getValues();
+
+//plotting
+// function plotData() {
+//   return document.getElementById("tester");
+// }
+
+// Plotly.newPlot("tester", [{ y: [plotData()], type: "line" }]);
 
 // function validateFields() {
 //   var err;
@@ -45,20 +78,25 @@ getValues();
 // validateFields();
 
 //modal
-var modal = document.getElementById("myModal");
-//button
-var btn = document.getElementById("sbt");
-//span to close
-var sp = document.getElementById("close");
-btn.onclick = function() {
-  modal.style.display = "block";
-};
-sp.onclick = function() {
-  modal.style.block = "none";
-};
+// var modal = document.querySelector(".modal");
+// //button
+// var btn = document.getElementById("sbt");
+// var d = document.getElementById("demo");
+// //span to close
+// var sp = document.querySelector(".close");
 
-window.onclick = event => {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-};
+// btn.onclick = function() {
+// modal.style.display = "block";
+// d.style.display = "block";
+// };
+// sp.onclick = function() {
+// modal.style.display = "none";
+// };
+
+// window.onclick = function(event) {
+// if (event.target == modal) {
+// return (modal.style.display = "none");
+// } else {
+// return null;
+// }
+// };
