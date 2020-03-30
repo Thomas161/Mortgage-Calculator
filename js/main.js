@@ -1,4 +1,4 @@
-var term, interest, amount, monthPayment;
+var term, interest, amount, monthPayment, fr, err;
 
 window.onload = function() {
   document.getElementById("sbt").onclick = getValues;
@@ -6,6 +6,7 @@ window.onload = function() {
 
 //use toFixed(2) to set the precision of the mPayment. Use it on an int.
 function getValues() {
+  validateFields();
   term = document.getElementById("term").value;
   interest = document.getElementById("int").value;
   amount = document.getElementById("amount").value;
@@ -32,11 +33,29 @@ function getValues() {
             backgroundColor: "green",
             borderColor: "#777",
             color: "red",
-            width: "150"
+            width: "70",
+            height: "70"
           }
         ]
       },
-      options: {}
+      options: {
+        title: {
+          display: true,
+          text: "Mortgage Month Payments ($)",
+          fontSize: 25
+        },
+        legend: {
+          position: "right"
+        },
+        layout: {
+          padding: {
+            left: 600,
+            right: 0,
+            bottom: 1000,
+            top: 0
+          }
+        }
+      }
     });
     console.log("BarChart : ", barChart);
     return barChart;
@@ -45,27 +64,57 @@ function getValues() {
   return f;
 }
 
-// function validateFields() {
-//   var err;
+function validateFields() {
+  var t = document.getElementById("term");
+  var a = document.getElementById("amount");
+  var i = document.getElementById("int");
 
-//   var term = document.getElementById("term");
-//   var amount = document.getElementById("amount");
-//   var interest = document.getElementById("int");
-//   console.log(term.style);
-//   console.log(amount);
-//   console.log(interest);
+  if (isNaN(t.value)) {
+    alert("no good");
+  }
+  if (isNaN(a.value)) {
+    alert("no good");
+  }
+  if (isNaN(i.value)) {
+    alert("no good");
+  }
 
-//   if (
-//     (isNaN(term) && term.value.trim() == "") ||
-//     (isNaN(amount) && amount.value.trim() == "") ||
-//     (isNaN(intrest) && interest.value.trim() == "")
-//   ) {
-//     err = "no good";
-//     return false;
-//   } else {
-//     err = green;
-//     true;
+  return true;
+}
+validateFields();
+
+//   .addEventListener("change", validateFields);
+// fr.addEventListener("submit", e => {
+//   var messages = [];
+//   if (isNaN(term) || term === "" || term === null) {
+//      messages.push("no good");
+//     alert("no good");
 //   }
-//   document.getElementById("demo").innerHTML = err;
-// }
-// validateFields();
+//   if (isNaN(amount) || amount === "" || amount === null) {
+//     messages.push("no good");
+//   }
+//   if (isNaN(interest) || interest === "" || interest === null) {
+//     messages.push("no good");
+//   }
+//   if (messages.length > 0) {
+//     e.preventDefault();
+//     err.innerText = messages.join();
+//   }
+
+//   //document.getElementById("mess").innerHTML = err;
+// });
+// term = document
+//   .getElementById("term")
+//   .addEventListener("change", validateFields);
+// amount = document
+//   .getElementById("amount")
+//   .addEventListener("change", validateFields);
+// interest = document
+//   .getElementById("int")
+//   .addEventListener("change", validateFields);
+// console.log(term);
+// console.log(amount);
+// console.log(interest);
+
+// fr = document.getElementById("fuzz");
+// err = document.getElementById("mess");

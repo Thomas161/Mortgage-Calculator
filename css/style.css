@@ -1,23 +1,18 @@
 body {
-  background-image: url("../order.jpeg");
+  /* background-image: url("../order.jpeg"); */
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.display-1 {
-  color: blueviolet;
-  text-align: center;
-  font-size: 60px;
-}
 .box {
   position: absolute;
-  left: 10px;
-  top: 120px;
+  left: 80px;
+  top: 10px;
   border: solid gold 4px;
   border-radius: 20px;
-  background-color: #4d4848;
+  background-color: slateblue;
   height: 380px;
-  min-width: 500px;
+  min-width: 450px;
 }
 
 #term,
@@ -54,4 +49,15 @@ label {
 input:valid {
   background-color: green;
   color: white;
+}
+
+input:invalid {
+  background-color: darkred;
+  color: white;
+}
+
+#demo {
+  font-size: 1em;
+  color: goldenrod;
+  left: 50px;
 }

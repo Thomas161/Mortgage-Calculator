@@ -12,26 +12,43 @@
   </head>
 
   <body>
-    <h1 class="display-1">Mortgage Calculator</h1>
     <div class="box">
       <br />
-      <form name="form1"></form>
+      <form name="form1" id="fuzz"></form>
         <label>Rate/Interest%</label>
-        <input required="true" type="text" id="int" />
-
+        <input 
+        type="number" 
+        id="int" 
+        maxlength="2" 
+        required 
+        />
         <hr />
         <label>Loan Term </label>
-        <input required="true" type="text" id="term" />
-
+        <input 
+        type="number" 
+        id="term" 
+        minlength="2" 
+        maxlength="2" 
+        required
+       />
         <hr />
         <label>Loan Amount </label>
-        <input required="true" type="text" id="amount" />
-
+        <input 
+        type="number" 
+        id="amount" 
+        minlength="6" 
+        maxlength="6" 
+        required 
+       />
+   
         <hr />
 
-        <button class="btn btn-warning" type="button" id="sbt" value="Submit">
-          Submit
-        </button>
+        <input 
+  
+        class="btn btn-warning" 
+        type="button" 
+        id="sbt" 
+        value="Submit"/>
         <hr />
         <input
           class="btn btn-danger"
@@ -40,14 +57,17 @@
           value="Reset Form"
         />
       </form>
+ 
+    
     </div>
     <p id="demo"></p>
 
-   <canvas id="myChart"></canvas>
-    
+<div>
+   <canvas id="myChart" style="display: block; height: 140px; width: 140px;" class="chartjs-render-monitor"></canvas>
+  </div>
     <script src="js/main.js" type="text/javascript">
     let my = document.getElementById('myChart').getContext('2d');
-
+    
     </script>
   </body>
 </html>
