@@ -79,6 +79,11 @@ function getValues() {
 }
 
 function reload() {
-  location.reload();
-  return false;
+  try {
+    alert("Leaving so soon ...");
+    location.reload();
+    return false;
+  } catch (err) {
+    console.log(err.message);
+  }
 }
