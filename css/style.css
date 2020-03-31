@@ -1,5 +1,4 @@
 body {
-  /* background-image: url("../order.jpeg"); */
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -11,38 +10,33 @@ body {
   border: solid gold 4px;
   border-radius: 20px;
   background-color: slateblue;
-  height: 380px;
+  height: 300px;
   min-width: 450px;
 }
 
 #term,
 #int,
-#amount,
-#pmt {
+#amount {
   width: 100px;
 }
 #int {
-  margin-left: 110px;
+  margin-left: 103px;
 }
 #term {
   margin-left: 150px;
 }
 #amount {
-  margin-left: 133px;
-}
-#pmt {
-  margin-left: 210px;
+  margin-left: 130px;
 }
 
 label {
   font-family: monospace;
   color: white;
   margin-left: 20px;
-  font-size: medium;
+  font-size: large;
 }
 
-#sbt,
-#rst {
+#sbt {
   margin-left: 30px;
 }
 
@@ -56,8 +50,11 @@ input:invalid {
   color: white;
 }
 
-#demo {
-  font-size: 1em;
-  color: goldenrod;
-  left: 50px;
+#pos {
+  position: absolute;
+  font-size: 3em;
+  color: rgb(82, 32, 218);
+  left: 200px;
+  top: 450px;
+  float: center;
 }

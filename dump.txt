@@ -1,0 +1,13 @@
+//document.getElementById("rst").addEventListener("click", resetValues, false);
+// function resetValues() {
+//   // e.preventDefault();
+//   // return document.getElementById("fuzz").reset();
+
+//   var bind = {
+//     a: (document.getElementById("term").innerHTML.value = ""),
+//     b: (document.getElementById("int").innerHTML.value = ""),
+//     c: (document.getElementById("amount").innerHTML.value = "")
+//   };
+//   const { a, b, c } = bind;
+//   return `${a}${b}${c}`;
+// }
