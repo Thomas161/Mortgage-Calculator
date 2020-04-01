@@ -52,10 +52,21 @@ input:invalid {
 
 #pos {
   position: absolute;
-  font-size: 3em;
+  font-size: 2.5em;
   color: rgb(82, 32, 218);
   left: 200px;
   top: 450px;
   float: center;
+}
+
+#demo {
+  list-style-type: none;
   background-color: yellowgreen;
+  border-radius: 15px;
+  width: 140px;
+  text-align: center;
+}
+#del {
+  font-size: 0.5em;
+  display: none;
 }

@@ -32,9 +32,9 @@ function getValues() {
     monthPayment = amount * solution;
 
     var f = function() {
-      var a = (document.getElementById("demo").innerHTML = monthPayment.toFixed(
-        0
-      ));
+      var a = (document.getElementById(
+        "demo"
+      ).innerHTML = `${monthPayment.toFixed(0)}`);
       let barChart = new Chart(myChart, {
         type: "bar",
         data: {
@@ -85,5 +85,14 @@ function reload() {
     return false;
   } catch (err) {
     console.log(err.message);
+  }
+}
+function removeMe(e) {
+  try {
+    var el = e;
+    el.remove();
+    return false;
+  } catch (error) {
+    console.log("Error status => ", error);
   }
 }
